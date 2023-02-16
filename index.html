@@ -62,7 +62,7 @@
 	<h1> Generate your Cupon code below</h1>
 	<br>
 	<br>
-<button onclick="generatePromoCode()">Generate Promo Code</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button id="promo-btn" onclick="generatePromoCode()">Generate Promo Code</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="text" id="promo-code-text" readonly>
 <br><br><br>
 	
@@ -87,6 +87,8 @@ function generatePromoCode() {
     const randomIndex = Math.floor(Math.random() * characters.length);
     promoCode += characters.charAt(randomIndex);
   }
+		  document.getElementById("promo-btn").disabled = true;
+
   document.getElementById("promo-code-text").value = promoCode;
 }
 
