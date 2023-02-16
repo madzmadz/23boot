@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 5 Website Example</title>
+  <title>Edred</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -60,11 +60,10 @@
 	
 	</div>
 	<h1> Generate your Cupon code below</h1>
-	<br>
-	<br>
+	
 <button id="promo-btn" onclick="generatePromoCode()">Generate Promo Code</button> 
 <input type="text" id="promo-code-text" readonly>
-
+<br><br>
 	
 	
 	</div>
@@ -87,7 +86,7 @@ function generatePromoCode() {
     const randomIndex = Math.floor(Math.random() * characters.length);
     promoCode += characters.charAt(randomIndex);
   }
-		  document.getElementById("promo-btn").disabled = true;
+	  document.getElementById("promo-btn").disabled = true;
 
   document.getElementById("promo-code-text").value = promoCode;
 }
