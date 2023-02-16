@@ -54,23 +54,43 @@
 
 <div class="container mt-5 bg-danger">
 	<div class="row">
-	<div class="col-sm-4">
+	<div class="col-sm-2">
 		
 		</div>
 	
 	</div>
-	<h1>Why CSR</h1>
-	<br> get to know about us more
-	
+	<h1> Generate your Cupon code below</h1>
+	<br>
+	<br>
+<button onclick="generatePromoCode()">Generate Promo Code</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="promo-code-text" readonly>
+<br><br><br>
 	
 	
 	</div>
 	
 
+	
+	
+	
 <div class="mt-5 p-4 bg-dark text-white text-center">
   <p>Footer</p>
 </div>
 
 </body>
+	<script>
+function generatePromoCode() {
+  const length = 8; // Change this to adjust the length of the promo code
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let promoCode = '';
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    promoCode += characters.charAt(randomIndex);
+  }
+  document.getElementById("promo-code-text").value = promoCode;
+}
+
+
+	</script>
 </html>
 
